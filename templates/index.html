@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price Prediction</title>
+</head>
+<body>
+    <h1>Diamond Price Prediction</h1>
+    <form method="POST" action="/">
+        <label for="carat">Carat:</label>
+        <input type="text" id="carat" name="carat" required><br><br>
+
+        <label for="cut">Cut:</label>
+        <select id="cut" name="cut" required>
+            <option value="Ideal">Ideal</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Premium">Premium</option>
+        </select><br><br>
+
+        <label for="color">Color:</label>
+        <select id="color" name="color" required>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+        </select><br><br>
+
+        <label for="clarity">Clarity:</label>
+        <select id="clarity" name="clarity" required>
+            <option value="IF">IF</option>
+            <option value="VVS1">VVS1</option>
+            <option value="VVS2">VVS2</option>
+            <option value="VS1">VS1</option>
+            <option value="VS2">VS2</option>
+            <option value="SI1">SI1</option>
+            <option value="SI2">SI2</option>
+            <option value="I1">I1</option>
+        </select><br><br>
+
+        <label for="depth">Depth:</label>
+        <input type="text" id="depth" name="depth" required><br><br>
+
+        <label for="table">Table:</label>
+        <input type="text" id="table" name="table" required><br><br>
+
+        <label for="length">Length:</label>
+        <input type="text" id="length" name="length" required><br><br>
+
+        <label for="width">Width:</label>
+        <input type="text" id="width" name="width" required><br><br>
+
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if pred_value %}
+    <h2>Predicted Price:</h2>
+    <p>{{ pred_value }}</p>
+    {% endif %}
+</body>
+</html>
